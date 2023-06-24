@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  threejs-srv:
+    image: node:latest
+    command: /bin/sh -c "cd /opt && npm install && npx vite --host "
+    volumes:
+      -  ./threejs-srv/bin:/opt
+    ports:
+      - 80:5173
